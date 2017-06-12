@@ -24,6 +24,12 @@ html{
     line-height: 1.1;
   }
 
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+
   body{
     font-family: "Catamaran", sans-serif;
     line-height: 1.4em;
@@ -109,7 +115,7 @@ html{
    .everyday {
      display:flex;
      margin: 0rem 0rem 0rem 0rem;
-     background-color: lightgray;
+     background-color: #BBBECF;
      }
 
      .everyday img {
@@ -172,8 +178,6 @@ html{
     justify-content: flex-start;
     align-items: flex-start;
     background-color: lightyellow;
-    border: 1px solid red;
-
   }
 
   .practicing img {
@@ -183,6 +187,7 @@ html{
   }
 
   .practicing h1 {
+    display: flex;
     padding-left: 1.5rem;
     font-weight: 700;
     font-size: 2.5rem;
@@ -208,14 +213,14 @@ html{
      flex-direction: column;
      justify-content:center;
      align-items:flex-start;
-     border-left: 1px solid lightgray;
+     border-left: 1px solid #BBBECF;
    }
 
    .three-one {
      display: flex;
      align-items: flex-start;
      padding: 2rem 1.7rem 1rem 1rem;
-     border-bottom: 1px solid lightgray;
+     border-bottom: 1px solid #BBBECF;
    }
 
    .three-one img {
@@ -301,7 +306,7 @@ html{
    }
 
    .three-three {
-    background-color: lightgrey;
+    background-color: #BBBECF;
 
    }
 
@@ -341,3 +346,51 @@ html{
     .three-three .txt a:hover {
      color:red;
    }
+   .startlearn {
+     justify-content: center;
+     background-color: #D2D5EB;
+
+   }
+
+
+   .startlearn h1 {
+     display: flex;
+     justify-content: center;
+     font-weight: 800;
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+     color: blue;
+   }
+
+   .photo-grid-container {
+     display: flex;
+
+
+   }
+
+   .photo-grid {
+     width: 1091px;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     margin-right: 3.6rem;
+     margin-left: 3.6rem;
+
+
+
+   }
+
+   .photo-grid-item {
+     display: inline-block;
+     padding-bottom: 2rem;
+     background-color: white;
+}
+
+.photo-grid-item h4 {
+  padding-left: 1rem;
+
+}
+
+.photo-grid-item p {
+  padding-left: 1rem;
+}
