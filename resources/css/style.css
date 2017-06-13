@@ -16,12 +16,14 @@ html{
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.2;
+    color: blue;
   }
 
   h3 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.1;
+    color: blue;
   }
 
   h4 {
@@ -88,7 +90,7 @@ html{
         }
 
         .large a:visited {
-          color: black;
+          color: blue;
         }
 
         .large a:hover {
@@ -115,7 +117,7 @@ html{
    .everyday {
      display:flex;
      margin: 0rem 0rem 0rem 0rem;
-     background-color: #BBBECF;
+     background-color: #EDF2F2;
      }
 
      .everyday img {
@@ -137,6 +139,7 @@ html{
    font-size: 2.2rem;
    font-weight: 700;
    line-height: 1.1;
+   color: blue;
 
   }
    .hl-sml {
@@ -177,7 +180,7 @@ html{
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: lightyellow;
+    background-color: #F0FFFF;
   }
 
   .practicing img {
@@ -348,7 +351,7 @@ html{
    }
    .startlearn {
      justify-content: center;
-     background-color: #D2D5EB;
+     background-color: #D3F0F0;
 
    }
 
@@ -371,26 +374,207 @@ html{
    .photo-grid {
      width: 1091px;
      display: flex;
-     justify-content: space-between;
+     justify-content: center;
      flex-wrap: wrap;
-     margin-right: 3.6rem;
-     margin-left: 3.6rem;
-
-
-
+     margin-bottom: 2rem;
    }
 
    .photo-grid-item {
      display: inline-block;
      padding-bottom: 2rem;
      background-color: white;
+     margin-bottom: 1rem;
+     margin-right: 1rem;
+     margin-left: 1rem;
 }
 
 .photo-grid-item h4 {
   padding-left: 1rem;
+  padding-top: 1rem;
 
 }
 
 .photo-grid-item p {
   padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+
+.thesis {
+  justify-content:center;
+  background-color: #faffff;
+  border-bottom: 1px solid darkgray;
+  background-color: #EDF2F2
+
+}
+  .thesis h1 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem;
+    color: blue;
+ }
+
+ .thesis-container {
+   display: flex;
+
+ }
+
+ .exhibit {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin-left: 1.5rem;
+   margin-right: 1rem;
+
+
+ }
+
+.exhibit h3 {
+  color: blue;
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+
+}
+
+
+.exhibit p {
+  padding-bottom: 2rem;
+}
+
+.fisma {
+  display: flex;
+  flex-direction: column;
+  width: 423px;
+  align-items: flex-start;
+
+}
+
+.fisma-item1 {
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  background-color: #BBBECF;
+  width: 407px;
+
+}
+
+
+.fisma-item1 img {
+  height: 136px;
+  width: 136px;
+  padding-right: 1rem;
+
+}
+
+.fis1-txt h3 {
+  display: flex;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: blue;
+}
+
+
+
+
+.now-then {
+ display: flex;
+ margin-top: 1rem;
+}
+
+.now-then img {
+  height: 136px;
+  width: 136px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+}
+.now-then h3 {
+  color:blue;
+  font-size: 1.4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+
+.fisma {
+  display: flex;
+  flex-direction: column;
+  width: 423px;
+  align-items: flex-start;
+
+}
+
+.fisma-item1 {
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  background-color: #BBBECF;
+  width: 407px;
+
+}
+
+
+.fisma-item1 img {
+  height: 136px;
+  width: 136px;
+  padding-right: 1rem;
+
+}
+
+.fis1-txt h3 {
+  display: flex;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: blue;
+}
+
+.now-then {
+ display: flex;
+ margin-top: 1rem;
+}
+
+.now-then img {
+  height: 136px;
+  width: 136px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+}
+.now-then h3 {
+  color:blue;
+  font-size: 1.4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+
+footer {
+  display: flex;
+  margin: 1rem 1rem 2rem 1.5rem;
+  justify-content: space-between;
+
+}
+
+.copyright {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+
+}
+
+.terms span {
+  color: black;
+}
+
+.terms span:hover {
+  color: red;
+}
+
+.terms span:active {
+  color: darkviolet;
+  background-color: coral;
 }
