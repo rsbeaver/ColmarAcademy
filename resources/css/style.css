@@ -6,8 +6,18 @@ html{
     font-family:  "Catamaran";
   }
 
+  .media-container {
+    overflow: hidden;
+  }
+
+  .media-container img,
+  .media-container video {
+    display: block;
+    width: 100%;
+  }
+
   .site-container {
-    max-width: 68.19rem;
+    /*max-width: 68.19rem;*/
     margin: auto;
     border: 1px solid darkgray;
   }
@@ -32,7 +42,7 @@ html{
     line-height: normal;
   }
 
-  body{
+  body {
     font-family: "Catamaran", sans-serif;
     line-height: 1.4em;
   }
@@ -40,7 +50,8 @@ html{
 
   header {
       display: flex;
-      width: 68.19rem;
+      /*width: 68.19rem;*/
+      width: 100vw;
       height: 4rem;
       justify-content: space-between;
       position: fixed;
@@ -49,7 +60,7 @@ html{
 
       }
 
-      header img{
+      header img {
         height: 3rem;
         padding-left: 1.5rem;
       }
@@ -79,7 +90,6 @@ html{
           justify-content:flex-end;
           padding-right: 1.5rem;
           text-decoration: none;
-
       }
 
       .large a {
@@ -103,7 +113,7 @@ html{
           background-color: lightcyan;
         }
 
-      .vertblock{
+      .vertblock {
         height: 4rem;
         width: 0;
         border: 0;
@@ -111,46 +121,95 @@ html{
         border-style: solid;
         border-color: darkturquoise;
         background-color: "";
-
       }
 
-   .everyday {
+      .small {
+        display: none;
+      }
+
+   /* Hide title / nav large items replace with nav small
+       icons -- for tablet sized devices */
+
+
+      @media only screen and (min-width: 150px) and (max-width: 768px) {
+        .large {
+          display: none;
+        }
+
+        .logo {
+          display: none;
+        }
+
+        .small {
+          display: flex;
+          flex-direction: row;
+          width: 100vw;
+          justify-content: space-around;
+        }
+
+        .small img:hover {
+          height: 2.60rem;
+        }
+
+        .small img:active {
+          height: 2rem;
+        }
+        }
+
+  .everyday {
      display:flex;
-     margin: 0rem 0rem 0rem 0rem;
-     background-color: #EDF2F2;
+     background-color: #D3F0F0;
+     width: 100vw;
+     padding-left: 1.5rem;
+     padding-bottom: 2rem;
      }
 
-     .everyday img {
+     .students {
        display: flex;
-       margin: 2rem 2.5rem 2rem 1.5rem;
-       width: 58%;
+       width: 60%;
+       padding-top: 6rem;
+
+     }
+
+     .students img {
+       display: flex;
+       width: 100%;
+
+       overflow: hidden;
     }
 
     .learn{
     display: flex;
+    width: 40%;
     padding-top: 8.625rem;
     flex-direction: column ;
-    align-items: flex-start;
+    align-items: center;
     justify-content:flex-start;
   }
 
   .hl-big {
    display: flex;
-   font-size: 2.2rem;
-   font-weight: 700;
-   line-height: 1.1;
-   color: blue;
-
   }
+
+   .hl-big h1 {
+     display: flex;
+     font-size: 2.5rem;
+   }
+
+
    .hl-sml {
      display: flex;
-     font-size: 1.2rem;
-     font-weight: 600;
      padding-top: 40px;
      padding-bottom: 80px;
   }
 
-  .btn p {
+   .hl-sml h3 {
+     display: flex;
+     font-size: 1.5rem;
+
+   }
+
+  .btn {
   font-size: 1.8rem;
   font-weight: 800;
   color: white;
@@ -175,18 +234,120 @@ html{
     background-color: crimson;
   }
 
+   /* 1st main section resized to tablet and smaller  */
+  @media only screen and (min-width: 150px) and (max-width: 768px) {
+   .everyday {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    background-color: #D3F0F0;
+    padding-left: 1rem;
+    padding-bottom: 1.5rem;
+ }
+
+  .students {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding-top: 5rem;
+  }
+     .learn {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       padding: 2rem 0;
+
+
+       align-items: center;
+       justify-content: flex-start;
+   }
+
+      .everyday h1 {
+        display: flex;
+        font-size: 1.8rem;
+
+
+      }
+
+     .everyday .hl-sml {
+    display: flex;
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+
+ }
+
+      .everyday h3 {
+        display: flex;
+        font-size: 1.2rem;
+
+      }
+    }
+
+
+ /*display size reset to mobile-sized devices */
+@media only screen and (max-width: 570px) {
+  .everyday {
+    display: block;
+    margin: 0;
+    padding: 0 0 0 0;
+   background-color: #D3F0F0
+  }
+
+
+  .students img {
+   display: none;
+  }
+
+    .students {
+    display: block;
+    height: 11.25rem;
+    width: 100vw;
+    padding-left: 0;
+    background-color: darkgray;
+   }
+
+   .learn {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     padding-left: 1rem
+   }
+
+   .learn h1 {
+      font-size: 2rem;
+   }
+
+
+  .btn {
+  width: 45%;
+  padding: 0.5rem 0;
+  width:18rem;
+  margin-bottom:1.5rem;
+  border: 1px solid red;
+  }
+ }
+
+
+
   .photos {
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     background-color: #F0FFFF;
+    padding: 2rem 0 0 1.5rem
   }
+
+   .practicing {
+     width: 60%;
+
+   }
 
   .practicing img {
     display: flex;
-    width: 94%;
-    margin: 2rem 1.5rem 2rem 1.5rem;
+    width: 100%;
+    padding-bottom: 2rem;
   }
 
   .practicing h1 {
@@ -211,25 +372,26 @@ html{
     font-weight: 600;
   }
 
-  .threepics {
+   .threepics {
+     width: 38%;
      display: flex;
      flex-direction: column;
      justify-content:center;
-     align-items:flex-start;
+     align-items: flex-start;
      border-left: 1px solid #BBBECF;
    }
 
    .three-one {
      display: flex;
      align-items: flex-start;
-     padding: 2rem 1.7rem 1rem 1rem;
+     padding: 0rem 0rem 1rem 1rem;
      border-bottom: 1px solid #BBBECF;
+
    }
 
    .three-one img {
     display: flex-start;
     flex-direction: row;
-   ;
     width: 148px;
     height: 148px;
    }
@@ -268,13 +430,13 @@ html{
    .three-two, .three-three {
      display: flex;
      align-items: flex-start;
-     padding: 1rem 1.5rem 1rem 1rem;
+     padding: 1rem 0 1rem 1rem;
+
    }
 
    .three-two img {
     display: flex-start;
     flex-direction: row;
-   ;
     width: 148px;
     height: 148px;
    }
@@ -310,13 +472,14 @@ html{
 
    .three-three {
     background-color: #BBBECF;
+    width: 100%;
+    padding-left:
 
    }
 
     .three-three img {
      display: flex;
      flex-direction: row;
-    ;
      width: 148px;
      height: 148px;
     }
@@ -349,12 +512,80 @@ html{
     .three-three .txt a:hover {
      color:red;
    }
+
+     /*  Hide mobile images until needed  */
+   .three-one-mobile img, .three-two-mobile img, .three-three-mobile img {
+      display: none;
+    }
+
+    /* re-size lower sections for mobile sizing */
+   @media only screen and (max-width: 570px) {
+         .practicing {
+           display: none;
+         }
+
+         .three-one {
+           padding: 0 0 0 1rem;
+         }
+         .threepics {
+           display: flex;
+           flex-direction: column;
+           width: 100vw;
+           padding: 0 0 0 0;
+           border: none;
+         }
+
+         .three-one img {
+           display: none;
+         }
+
+         .three-one-mobile img {
+           display: flex;
+           width: 100vw;
+         }
+
+          .three-one h3 {
+            padding-top: 1rem;
+
+          }
+
+          .three-two img {
+            display: none;
+          }
+
+          .three-two-mobile img {
+            display: flex;
+            width: 100vw;
+          }
+
+          .three-three img {
+            display: none;
+          }
+
+          .three-three-mobile img {
+            display: flex;
+            width: 100vw;
+          }
+
+
+         .three-one, .three-two, .three-three  {
+           width: 100vw;
+           background-color: white;
+           border: none;
+
+           .three-two, .three-three {
+             padding: 1 0 0 1;
+           }
+
+         }
+        }
+
+
    .startlearn {
-     justify-content: center;
+     /*justify-content: center;*/
      background-color: #D3F0F0;
-
+     margin: auto;
    }
-
 
    .startlearn h1 {
      display: flex;
@@ -367,12 +598,12 @@ html{
 
    .photo-grid-container {
      display: flex;
-
+     margin: auto;
 
    }
 
    .photo-grid {
-     width: 1091px;
+     /*width: 1091px;*/
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
@@ -388,10 +619,24 @@ html{
      margin-left: 1rem;
 }
 
-.photo-grid-item h4 {
+.photo-grid-item a {
+  display: flex;
+  text-decoration: none;
+  color: blue;
+  font-weight: 700;
+  font-size: 1.8rem;
   padding-left: 1rem;
   padding-top: 1rem;
+}
 
+.photo-grid-item a:hover {
+  color: red;
+  font-size: 1.6rem;
+}
+
+.photo-grid-item a:active {
+  color: blueviolet;
+  font-size: 1.7rem;
 }
 
 .photo-grid-item p {
@@ -399,12 +644,52 @@ html{
   margin-top: 0.5rem;
 }
 
+  /*  resize for mobile and change to mobile images */
+@media only screen and (max-width: 570px) {
+    .startlearn {
+      background-color:;
+    }
+
+    .photo-grid {
+      flex-direction: column;
+      width: 100vw;
+      }
+      .photo-grid-item {
+        background-color: #BBBECF;
+        justify-content: center;
+        padding: 1rem 0 1rem 1rem;
+        margin: 1rem 1rem 0rem 0rem;
+
+    }
+
+    .photo-grid-item a {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: blue;
+
+    }
+
+    .photo-grid-item a:hover {
+     color: red;
+     font-size: 1.8rem;
+   }
+
+    .photo-grid-item img {
+      display: none;
+    }
+     .photo-grid-item p {
+       display: none;
+     }
+    }
+
 
 .thesis {
   justify-content:center;
   background-color: #faffff;
   border-bottom: 1px solid darkgray;
   background-color: #EDF2F2
+  width: 100vw;
 
 }
   .thesis h1 {
@@ -425,8 +710,7 @@ html{
    justify-content: flex-start;
    margin-left: 1.5rem;
    margin-right: 1rem;
-
-
+   width: 60%;
  }
 
 .exhibit h3 {
@@ -435,7 +719,6 @@ html{
   padding-top: 1.5rem;
 
 }
-
 
 .exhibit p {
   padding-bottom: 2rem;
@@ -475,9 +758,6 @@ html{
   color: blue;
 }
 
-
-
-
 .now-then {
  display: flex;
  margin-top: 1rem;
@@ -551,6 +831,37 @@ html{
   padding-bottom: 1rem;
 }
 
+ /* change video, hide photos, for tablets and mobiles */
+@media only screen and (max-width: 678px) {
+   .fisma {
+    display: none;
+   }
+
+   .thesis {
+     border: none;
+   }
+
+   .exhibit {
+     width: 100vw;
+     margin: 0 0 2.5rem 0;
+   }
+
+  .exhibit h3 {
+    display: none;
+  }
+
+  .media-container {
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid lightgray;
+
+  }
+
+   .exhibit p {
+     display: none;
+   }
+ }
+
 
 footer {
   display: flex;
@@ -577,4 +888,24 @@ footer {
 .terms span:active {
   color: darkviolet;
   background-color: coral;
-}
+  }
+
+ /*  reconfigure footer for tablets and mobiles  */
+  @media only screen and (max-width: 678px) {
+
+    .terms {
+      display: none;
+    }
+
+    .copyright {
+      width: 100vw;
+    }
+
+    .copyright p {
+      font-size: 1.2rem
+    }
+
+    footer {
+      margin: 0 0 1rem 1rem
+    }
+  }
